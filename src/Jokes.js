@@ -4,8 +4,7 @@ import Error from "./Error";
 import Joke from "./Joke";
 
 const Jokes = (props) => {
-  const jokeURL =
-    "https://sv443.net/jokeapi/v2/joke/Anyhttps://sv443.net/jokeapi/v2/joke/Any";
+  const jokeURL = "https://sv443.net/jokeapi/v2/joke/Any";
   // Initial state hook to store joke
   const [joke, setJoke] = React.useState({});
   const [jokeCount, setJokeCount] = React.useState(0);
@@ -25,7 +24,7 @@ const Jokes = (props) => {
         console.log(error);
         setError(error);
       });
-  }, [setJokeCount]);
+  }, [jokeCount]);
 
   const handleClick = () => {
     // Increase count for number of jokes viewed
@@ -34,6 +33,8 @@ const Jokes = (props) => {
 
   return (
     <div>
+      <h1>{jokeCount}</h1>
+      <Joke joke={joke} />
       <button onClick={handleClick}> Get New Joke </button>
     </div>
   );
