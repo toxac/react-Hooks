@@ -24,6 +24,11 @@ const Jokes = (props) => {
         console.log(error);
         setError(error);
       });
+
+    //Function which runs when the component is unmounted
+    return () => {
+      console.log("component unmounted!");
+    };
   }, [jokeCount]);
 
   const handleClick = () => {
