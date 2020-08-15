@@ -1,5 +1,7 @@
 import React from "react";
 import axios from "axios";
+import Error from "./Error";
+import Joke from "./Joke";
 
 const Jokes = (props) => {
   const jokeURL =
