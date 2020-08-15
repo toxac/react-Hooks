@@ -31,13 +31,15 @@ const Jokes = (props) => {
     setJokeCount((prevState) => prevState + 1);
   };
 
-  return (
+  const displayJoke = (
     <div>
       <h1>{jokeCount}</h1>
       <Joke joke={joke} />
       <button onClick={handleClick}> Get New Joke </button>
     </div>
   );
+
+  return <>{displayJoke}</>;
 };
 
 export default Jokes;
