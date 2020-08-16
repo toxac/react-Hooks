@@ -10,6 +10,7 @@ const Joke = ({ joke }) => {
         <i>{joke.setup}</i>
       </h2>
       <h1>{joke.delivery} </h1>
+      <p> Category : {joke.category} </p>
     </div>
   );
   const displayJoke = joke.type === "twopart" ? jokeTwoPart : jokeSingleView;
